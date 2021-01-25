@@ -21,7 +21,7 @@ TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT := cortex-a53
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv8-a
@@ -40,6 +40,7 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8953
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_PREBUILT_KERNEL := device/vsmart/casuarina/Image.gz-dtb
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78af000 androidboot.selinux=permissive buildvariant=eng
 BOARD_KERNEL_BASE := 0x80000000
@@ -64,11 +65,16 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_DEFAULT_BRIGHTNESS := 255
 TW_DEFAULT_LANGUAGE := ru
-TW_FORCE_USE_BUSYBOX := true
+TW_USE_TOOLBOX := true
+# TW_FORCE_USE_BUSYBOX := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
 
-# Crypto
+# Encryption
+PLATFORM_VERSION := 16.1.0
+PLATFORM_SECURITY_PATCH := 2099-12-31
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
-PLATFORM_SECURITY_PATCH := 2099-12-31
+BOARD_USES_QCOM_FBE_DECRYPTION := true
 
