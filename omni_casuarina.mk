@@ -27,7 +27,9 @@ PRODUCT_MANUFACTURER := vsmart
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.build.security_patch=2099-12-31 \
 	ro.secure=1 \
-	ro.adb.secure=0
+	ro.adb.secure=0 \
+	ro.product.device=casuarina \
+	ro.build.date.utc=1000000000
 
 BUILD_FINGERPRINT := vsmart/casuarina_rus/casuarina:10/QKQ1.200311.002/V430E_RUS_U_B2_201013:user/release-keys
 PRODUCT_BUILD_PROP_OVERRIDES += \
