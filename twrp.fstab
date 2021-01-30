@@ -8,6 +8,9 @@
 /vendor                 ext4    /dev/block/bootdevice/by-name/vendor                      flags=display="Vendor";backup=1;wipeingui
 /data                   ext4    /dev/block/bootdevice/by-name/userdata                    flags=encryptable=footer;length=-16384;fileencryption=ice:aes-256-cts
 
+/system_image           emmc    /dev/block/bootdevice/by-name/system
+/vendor_image           emmc    /dev/block/bootdevice/by-name/vendor
+
 /frp                    emmc    /dev/block/bootdevice/by-name/config                      flags=display="FRP";wipeingui
 /misc                   emmc    /dev/block/mmcblk0p32                                     flags=display="misc"
 /firmware               vfat    /dev/block/bootdevice/by-name/modem                       flags=display="Firmware";mounttodecrypt
