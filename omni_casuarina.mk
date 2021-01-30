@@ -25,7 +25,6 @@ PRODUCT_MODEL := Joy 3+
 PRODUCT_MANUFACTURER := vsmart
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.build.security_patch=2099-12-31 \
 	ro.secure=1 \
 	ro.adb.secure=0 \
 	ro.product.device=casuarina \
