@@ -94,11 +94,8 @@ SHRP_STATUSBAR_RIGHT_PADDING := 40
 SHRP_STATUSBAR_LEFT_PADDING := 40
 SHRP_REC := /dev/block/bootdevice/by-name/recovery
 
-# Recovery Type (It can be treble,normal,SAR) [Only for About Section] *
-SHRP_REC_TYPE := Normal
-
 # Device codename *
-SHRP_DEVICE_CODE := V430A
+SHRP_DEVICE_CODE := casuarina
 
 # Maintainer name *
 SHRP_MAINTAINER := Leeminh
