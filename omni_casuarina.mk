@@ -1,6 +1,6 @@
 # Inherit some common Omni stuff.
 $(call inherit-product, vendor/pb/config/common.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := device/vsmart/casuarina/Image.gz-dtb
